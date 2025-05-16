@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+     triggers {
+         // Poll every minute just for simulation purpose
+        pollSCM('* * * * *') 
+    }
     environment {
         PROJECT_NAME = "SampleCIdemo"
         STAGING_ENV = "staging"
